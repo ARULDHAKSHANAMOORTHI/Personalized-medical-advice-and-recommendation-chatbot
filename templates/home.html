@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="{{ url_for('static', filename='akatsuki.png') }}" type="icon type">
+  <title>Personalized Health care and Recommendation Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <script defer src="{{ url_for('static', filename='home.js') }}"></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header style="text-align: center;">
+    <h1>Personalized Medical Advice and Recommendation Chatbot 🤖</h1>
+  </header>
+<button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+  <!-- Sign In / Sign Up Container -->
+  <div id="container" class="container">
+    <!-- FORM SECTION -->
+    <div class="row">
+      <!-- SIGN UP -->
+      <div class="col align-items-center flex-col">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-up">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <label for="signup-username"></label>
+              <input type="text" id="signup-username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+              <i class='bx bx-mail-send'></i>
+              <label for="signup-email"></label>
+              <input type="email" id="signup-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="signup-password"></label>
+              <input type="password" id="signup-password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="signup-confirm-password"></label>
+              <input type="password" id="signup-confirm-password" placeholder="Confirm Password" required>
+            </div>
+            <button onclick="handleSignUp()">Sign Up</button>
+            <p>
+              <span>Already have an account?</span>
+              <b onclick="toggle()" class="pointer">Sign in here</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- END SIGN UP -->
+
+      <!-- SIGN IN -->
+      <div class="col align-items-center flex-col">
+        <div class="form-wrapper align-items-center">
+          <div class="form sign-in">
+            <h2>Sign In</h2>
+            <div class="input-group">
+              <i class='bx bxs-user'></i>
+              <label for="signin-username"></label>
+                <label for="signin-email"></label><input type="text" id="signin-email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+              <i class='bx bxs-lock-alt'></i>
+              <label for="signin-password"></label>
+              <input type="password" id="signin-password" placeholder="Password" required>
+            </div>
+            <button onclick="handleSignIn()">Sign In</button>
+            <p>
+              <b>Forgot password?</b>
+            </p>
+            <p>
+              <span>Don't have an account?</span>
+              <b onclick="toggle()" class="pointer">Sign up here</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- END SIGN IN -->
+    </div>
+    <!-- END FORM SECTION -->
+
+    <!-- CONTENT SECTION -->
+    <div class="row content-row">
+      <!-- SIGN IN CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="text sign-in">
+          <h2>Welcome Back</h2>
+        </div>
+      </div>
+      <!-- SIGN UP CONTENT -->
+      <div class="col align-items-center flex-col">
+        <div class="text sign-up">
+          <h2>Join Us Today</h2>
+        </div>
+      </div>
+    </div>
+    <!-- END CONTENT SECTION -->
+  </div>
+</body>
+</html>
+{##}
+
+{#===================no more modification============================================================================#}

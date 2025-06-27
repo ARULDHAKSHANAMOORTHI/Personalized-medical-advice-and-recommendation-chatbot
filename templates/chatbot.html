@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Advice Chatbot</title>
+    <link rel="icon" href="{{ url_for('static', filename='akatsuki.png') }}" type="image/png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <h2>Chat History</h2>
+{#            <button id="new-chat" onclick="startNewChat()">+ New Chat</button>#}
+            <button id="new-chat">+ New Chat</button>
+{#            <button id="delete-history">🗑️ Delete History</button>#}
+            <ul id="chat-history"></ul>
+        </aside>
+
+        <!-- Main Chat Window -->
+        <main class="chatbox">
+            <div class="chat-header">
+                <h2>Medical Advice Chatbot</h2>
+                <div>
+                    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+                    <button id="logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <div class="messages" id="messages"></div>
+
+            <!-- Download Button (Initially Hidden) -->
+            <div id="download-container" style="display: none; justify-content: center; align-items: center; gap: 10px;">
+            <button id="download-report" onclick="downloadReport()">📄 Download Report</button>
+              <button onclick="hideDownloadOption()" style="background: none; border: none; font-size: 20px; cursor: pointer;">❌</button>
+            </div>
+
+            <div id="typing-indicator" style="display: none;">Chatbot is typing...</div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <button id="clear-chat">Clear Chat</button>
+                <input type="text" id="userInput" placeholder="Type a symptom or press Enter to start..." autofocus>
+                <button id="send-btn" onclick="startSymptomCollection()">Send</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+</body>
+</html>
