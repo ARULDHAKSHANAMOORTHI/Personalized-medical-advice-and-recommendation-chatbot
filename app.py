@@ -34,7 +34,7 @@ def getChat(query):
         return "⚠️ Sorry, I couldn't process your request right now. Try again later."
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient(os.getenv("MONGO_URI"))
 db = client["chatbot_db"]
 users = db["users"]
 chats_collection = db["chats"]

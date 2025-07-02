@@ -1,0 +1,11 @@
+flask
+groq
+pymongo
+numpy
+pandas
+werkzeug
+gunicorn
+scikit-learn
+flask-cors
+fuzzywuzzy
+dotenv
