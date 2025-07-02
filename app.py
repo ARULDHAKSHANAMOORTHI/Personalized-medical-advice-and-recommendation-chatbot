@@ -9,12 +9,15 @@ import uuid  # For unique chat session IDs
 from chatbot import get_related_symptoms, cols, clf, le, severityDictionary, description_dict, precaution_dict
 from bson.objectid import ObjectId
 from groq import Groq
+from dotenv import load_dotenv
+load_dotenv()
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 client_llm = Groq(
-    api_key="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"
+    api_key=os.getenv('API_KEY')
 )
 def getChat(query):
     """Fetch medical information from Groq LLM."""
